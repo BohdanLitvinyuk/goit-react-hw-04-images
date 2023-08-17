@@ -70,7 +70,7 @@ class ImageGallery extends React.Component {
         <div>
           <ul className="ImageGallery">
             {hits.map(el=>{
-              return <ImageGalleryItem el={el} key={el.id} />
+              return <ImageGalleryItem element={el} key={el.id} />
             })}
             
           </ul>

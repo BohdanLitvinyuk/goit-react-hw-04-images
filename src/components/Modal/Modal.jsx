@@ -1,21 +1,19 @@
 import React from 'react';
 import './Modal.css';
-export class Modal extends React.Component {
-  onModalClick = e => {
+export function Modal({children,onClick}) {
+ const  onModalClick = e => {
     if (e.target === e.currentTarget) {
-      this.props.onClick();
+      onClick();
     }
   };
-  render() {
     return (
       <div className="Overlay">
-        <div className="Modal" onClick={this.onModalClick}>
-          {' '}
-          {this.props.children}{' '}
+        <div className="Modal" onClick={onModalClick}>
+          {children}
         </div>
       </div>
     );
   }
-}
 
-//
+
+
