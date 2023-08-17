@@ -1,10 +1,10 @@
-import {useState,useEffect} from 'react';
+import React from 'react';
 import './Searchbar.css';
 import PropTypes from 'prop-types';
 
 
 
-function Searchbar () {
+class Searchbar extends React.Component {
   state = {
     searchQuery: '',
   };
